@@ -1,0 +1,16 @@
+<!-- app/views/food/index.html.erb -->
+
+<h1>FOOD</h1>
+
+<h3><%= @total_results %> items returned</h3>
+
+<% @food_results.each do |result| %>
+  <div id="item-<% result.name %>">
+    <ul>
+        <li class='ndb_number'><%= result.ndb_number %></li>
+        <li class='name'><%= result.name %></li>
+        <li class='group'><%= result.group %></li>
+        <li class='manufacturer'><%= result.manufacturer %></li>
+    </ul>
+  </div>
+<% end %>
